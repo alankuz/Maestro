@@ -1,7 +1,4 @@
+.DS_Store
 node_modules
-.express
-.express-handlebars
-.path
-.mysql
-.eslint
-.sequelize 
+npm-debug.log
+.env
