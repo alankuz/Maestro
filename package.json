@@ -1,0 +1,33 @@
+{
+  "name": "superprojectchangethisnamelater",
+  "version": "1.0.0",
+  "description": "This is project 2 for U of U bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alankuz/Superprojectchangethisnamelater.git"
+  },
+  "keywords": [
+    "Project",
+    "2"
+  ],
+  "author": "Alan Kuzmanovic Emily Johnson-Eaton Jaron Landeen Rob canfield",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alankuz/Superprojectchangethisnamelater/issues"
+  },
+  "homepage": "https://github.com/alankuz/Superprojectchangethisnamelater#readme",
+  "devDependencies": {
+    "eslint": "^6.5.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mysql": "^2.17.1",
+    "path": "^0.12.7",
+    "sequelize": "^5.19.6"
+  }
+}
