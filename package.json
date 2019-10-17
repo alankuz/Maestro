@@ -1,7 +1,7 @@
 {
-  "name": "node-handlebars-boilerplate",
+  "name": "maestro-application",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
+  "description": "Maestro",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
