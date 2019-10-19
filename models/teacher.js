@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Teacher = sequelize.define("Author", {
+  var Teacher = sequelize.define("Teacher", {
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -27,7 +27,7 @@ module.exports = function(sequelize, DataTypes) {
   Teacher.associate = function(models) {
     // Associating Author with Posts
     // When an Author is deleted, also delete any associated Posts
-    Teacher.hasMany(models.Post, {
+    Teacher.hasMany(models.Student, {
       onDelete: "cascade"
     });
   };

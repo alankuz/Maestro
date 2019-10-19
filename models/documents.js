@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     docDate: {
       type: "TIMESTAMP",
-      defaultValue: Sequelize.literal("CURRENT_TIMESTAMP"),
+      defaultValue: sequelize.literal("CURRENT_TIMESTAMP"),
       allowNull: false
     }
   });
