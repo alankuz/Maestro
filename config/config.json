@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "alan",
-    "database": "bamazon",
+    "password": "Sverige94sek!",
+    "database": "maestrodb",
     "host": "localhost",
     "dialect": "mysql"
   },
