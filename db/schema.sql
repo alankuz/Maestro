@@ -6,7 +6,8 @@ CREATE TABLE teachers(
     id INT AUTO_INCREMENT NOT NULL,
     first_name VARCHAR (25) NOT NULL,
     last_name VARCHAR (25) NOT NULL,
-    email VARCHAR (40) NOT NULL
+    email VARCHAR (40) NOT NULL,
+    pass VARCHAR (50) NOT NULL,
     PRIMARY KEY (id)
 );
 CREATE TABLE students(
@@ -14,8 +15,8 @@ CREATE TABLE students(
     first_name VARCHAR (25) NOT NULL,
     last_name VARCHAR (25) NOT NULL,
     email VARCHAR (40) NOT NULL,
+    pass VARCHAR (50) NOT NULL,
     instrument VARCHAR (25) NOT NULL,
-    sq VARCHAR (50) NOT NULL
     PRIMARY KEY (id)
 );
 CREATE TABLE documents(
