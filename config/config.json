@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Sverige94sek!",
+    "password": "alan",
     "database": "maestrodb",
     "host": "localhost",
     "dialect": "mysql"
