@@ -1,7 +1,9 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
-
+var Chatkit = require("@pusher/chatkit-server");
+var cors = require("cors");
+var bodyParser = require("body-parser");
 var db = require("./models");
 
 var app = express();
