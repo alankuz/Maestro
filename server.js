@@ -12,7 +12,8 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 var chatkit = new Chatkit.default({
   instanceLocator: "v1:us1:4e1ac126-523b-48b9-98fd-42488dbd7573",
-  key: "42073586-f008-4265-8b25-b1a487092ac5:0xYJrqAV4etqNahg0pqMOUjAvc4dnJZMb0KVst5ZZXA="
+  key:
+    "42073586-f008-4265-8b25-b1a487092ac5:0xYJrqAV4etqNahg0pqMOUjAvc4dnJZMb0KVst5ZZXA="
 });
 
 // Middleware
