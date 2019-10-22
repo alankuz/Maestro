@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "AwakE*2014",
+    "password": "alan",
     "database": "maestrodb",
     "host": "localhost",
     "dialect": "mysql"
