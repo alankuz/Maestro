@@ -17,14 +17,14 @@ Maestro allows users to create two separate types of accounts, one for **teacher
 ### Dependencies
 
     1. node
-    2. express
-    3. mysql2
-    4. sequelize
-    5. bcrypt
-    6. passport
-    7. path
-    8. fs
-    9. mysql
-    
+    1. express
+    1. mysql2
+    1. sequelize
+    1. bcrypt
+    1. passport
+    1. path
+    1. fs
+    1. mysql
+    1. firebase
 
 ~created with love by rob canfield, alan kuzmanovic, jaron landeed, and emiliy johnson-eaton under instruction of Matt Banz, at Trilogy Education, Salt Lake City, UT
