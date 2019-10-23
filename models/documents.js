@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Documents = sequelize.define("Documents", {
+  var Document = sequelize.define("Documents", {
     docName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -20,5 +20,12 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
-  return Documents;
+  Document.associate = function(models) {
+    Document.belongsTo(models.Teacher, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+  return Document;
 };
