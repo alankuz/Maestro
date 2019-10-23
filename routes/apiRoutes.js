@@ -1,24 +1,23 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  // Get all students
+  app.get("/api/students", function(req, res) {
+    db.Student.findAll({}).then(function(dbUsers) {
+      res.json(dbUsers);
+    });
+  });
+  // Get all steachers
+  app.get("/api/teacher", function(req, res) {
+    db.Teacher.findAll({}).then(function(dbUsers) {
+      res.json(dbUsers);
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
-
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
+  // Create a new document
+  app.post("/api/document", function(req, res) {
+    db.Document.create(req.body).then(function(dbUser) {
+      res.json(dbUser);
     });
   });
 };
