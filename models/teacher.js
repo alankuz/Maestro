@@ -30,6 +30,9 @@ module.exports = function(sequelize, DataTypes) {
     Teacher.hasMany(models.Student, {
       onDelete: "cascade"
     });
+    Teacher.hasMany(models.Document, {
+      onDelete: "cascade"
+    });
   };
 
   return Teacher;
