@@ -27,13 +27,16 @@ module.exports = function(sequelize, DataTypes) {
   Teacher.associate = function(models) {
     // Associating Author with Posts
     // When an Author is deleted, also delete any associated Posts
-    Teacher.hasMany(models.Student, {
-      onDelete: "cascade"
-    });
-    Teacher.hasMany(models.Document, {
+    Teacher.hasMany(models.Students, {
       onDelete: "cascade"
     });
   };
-
+  Teacher.associate = function(models) {
+    // Associating Author with Posts
+    // When an Author is deleted, also delete any associated Posts
+    Teacher.hasMany(models.Documents, {
+      onDelete: "cascade"
+    });
+  };
   return Teacher;
 };
