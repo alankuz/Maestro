@@ -15,13 +15,17 @@ module.exports = function(app) {
     if (req.user.teacher === true){
     res.json("/teachers");}
   });
-  app.get("/api/studentlist", function (res, req) {
+
+  app.get("/api/studentlist", function (req, res) {
     db.User.findAll({
     where: {
         teacher: 0
     }
   }).then(function(result){
-    console.log(result)
+
+    res.json(result)
+  }).catch(function(err) {
+    console.log(err);
   })
 
 })
