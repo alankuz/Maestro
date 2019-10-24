@@ -23,6 +23,10 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    teacher: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
     }
   });
   // Creating a custom method for our User model. 
