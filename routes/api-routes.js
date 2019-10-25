@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+var post = require("../models/post")
 //
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -22,8 +23,18 @@ module.exports = function(app) {
         teacher: 0
     }
   }).then(function(result){
-
+    console.dir(result+ "apiroutes")
     res.json(result)
+  }).catch(function(err) {
+    console.log(err);
+  })
+
+})
+  app.get("/api/teacherposts", function (req, res) {
+    db.TeacherPosts.findAll().then(function(result){
+console.dir(result + "apiroutes")
+    res.json(result)
+    
   }).catch(function(err) {
     console.log(err);
   })
@@ -48,6 +59,13 @@ module.exports = function(app) {
     });
   });
 //
+app.post("/api/lesson", function(req, res) {
+  db.TeacherPosts.create({
+    message: req.body.message,
+    students: req.body.students,
+    teacher: req.body.teacher
+  })
+})
   // Route for logging user out
   app.get("/logout", function(req, res) {
     req.logout();
