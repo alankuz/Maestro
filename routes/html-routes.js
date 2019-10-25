@@ -12,7 +12,8 @@ module.exports = function (app) {
     if (req.user) {
       if (req.user.teacher === true) {
         res.redirect("/teachers");
-      } else { res.redirect("/members"); }
+      } if (req.user.teacher === false)
+      { res.redirect("/members"); }
 
 
     }
@@ -31,9 +32,12 @@ module.exports = function (app) {
   // If a user who is not logged in tries to access this route they will be 
   //redirected to the signup page
   app.get("/members", isAuthenticated, function (req, res) {
+    if (req.user.teacher === false) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
+  }else{res.redirect("/teachers")}
   });
   app.get("/teachers", isAuthenticated, function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/teacher.html"));
+    if (req.user.teacher === true) {
+    res.sendFile(path.join(__dirname, "../public/teacher.html"));}else{res.redirect("/members")}
   });
 };
