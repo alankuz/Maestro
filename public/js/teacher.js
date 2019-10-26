@@ -11,12 +11,12 @@ $(document).ready(function () {
 
 
         for(i=0; i<data.length; i++){
-        $("#student").append('<input type="checkbox" id="nameCheckBox" class="studentchecker" value="'+data[i].email+'"name="checkbox">' + data[i].realName);}
+        $("#student").append('<label id="studentNames"><input type="checkbox" id="nameCheckBox" class="studentchecker" value="'+data[i].email+'"name="checkbox">' + data[i].realName)+ "</label>"}
         
       })
  
       // Submit button Pressed creates the values and submits them
-    $("form#lesson").on("submit", function () {
+    $("#submit").on("click", function () {
       event.preventDefault();
       
       
@@ -49,8 +49,10 @@ $(document).ready(function () {
       window.location.replace(data);
     })
     
-    $(".studentcheckerx").prop('checked',false);
+    $(".studentchecker").prop('checked',false);
     $("#message").val("");
+
+    $("#comfirmed").html("<h4>message sent.</h4>");
   }
 });
 
