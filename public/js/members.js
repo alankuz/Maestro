@@ -4,12 +4,9 @@ $(document).ready(function() {
   var email;
   $.get("/api/user_data").then(function(data) {
     $(".member-name").text(data.realName);
-    console.log(data.realName)
     email=data.email
   });
-  console.log('teacherposts')
   $.get("/api/teacherposts").then(function(data) {
-    console.log(data[0].students)
     
 
      
@@ -19,17 +16,12 @@ $(document).ready(function() {
       var postEmails=data[x].students.split(',');
       var message = data[x].message
       var datePosted = data[x].createdAt
-      console.log(postEmails)
-      console.log(email.toString())
       for(i=0; i<postEmails.length; i++){
         if (email.toString() === postEmails[i]){
           $("#postcolumn").append("<div><h3>" + moment(datePosted).utc().format('MMMM Do YYYY HH:mm:ss')  + "</h3><p>" + message + "</p></div>") 
-          console.log(postEmails[i]+"success")
-          console.log(data[i].message+"success")
 
         } else {
-          console.log(postEmails[i])
-         console.log('else')
+          console.log('error')
         }
 
       }}

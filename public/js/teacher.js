@@ -3,11 +3,9 @@ $(document).ready(function () {
   $.get("/api/user_data").then(function(info) {
     teacher=info.realName
   });
-  console.log(teacher)
 // Grabs the list of students and puts them into a checklist  
     $.get("/api/studentlist")
     .then(function(data) {
-        console.log(data);
 
 
         for(i=0; i<data.length; i++){
@@ -28,7 +26,6 @@ $(document).ready(function () {
       });
      
      
-     console.log(studentList)
      
      
         
@@ -38,7 +35,6 @@ $(document).ready(function () {
           teacher: $(".member-name").text().trim()
         }
         postLesson(lesson.message, lesson.students, lesson.teacher)
-        console.log(lesson);
     });
     function postLesson(message, students, teacher){
     $.post("/api/lesson", {

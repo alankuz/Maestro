@@ -23,7 +23,6 @@ module.exports = function(app) {
         teacher: 0
     }
   }).then(function(result){
-    console.dir(result+ "apiroutes")
     res.json(result)
   }).catch(function(err) {
     console.log(err);
@@ -32,7 +31,6 @@ module.exports = function(app) {
 })
   app.get("/api/teacherposts", function (req, res) {
     db.TeacherPosts.findAll().then(function(result){
-console.dir(result + "apiroutes")
     res.json(result)
     
   }).catch(function(err) {
@@ -45,7 +43,6 @@ console.dir(result + "apiroutes")
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
   app.post("/api/signup", function(req, res) {
-    console.log(req.body);
     db.User.create({
       realName: req.body.realName,
       email: req.body.email,
