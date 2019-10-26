@@ -32,9 +32,9 @@ module.exports = function (app) {
   // If a user who is not logged in tries to access this route they will be 
   //redirected to the signup page
   app.get("/members", isAuthenticated, function (req, res) {
-    if (req.user.teacher === false) {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
-  }else{res.redirect("/teachers")}
+    if (req.user.teacher === true) {
+      res.redirect("/teachers")
+  }else{res.sendFile(path.join(__dirname, "../public/members.html"))}
   });
   app.get("/teachers", isAuthenticated, function (req, res) {
     if (req.user.teacher === true) {

@@ -2,65 +2,69 @@
 <html lang="en">
 
 <head>
-  <title>Welcome!</title>
+  <title>Maestro · Student</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
   <link href="stylesheets/style.css" rel="stylesheet">
   <link href="stylesheets/student.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 </head>
 
 <body>
 
-    <div id ="topstyle">
+  <div id="topstyle">
 
-      <img src="./images/maestro-white-logo.svg" alt="logo" style="float: left; height: 100%; margin: auto; padding: 10px;">
+    <img src="./images/maestro-white-logo.svg" alt="logo"
+      style="float: left; height: 100%; margin: auto; padding: 10px; margin-left: 3%;">
 
-      <div class="dropdown" style="float: right; height: 100%; margin: auto; padding: 10px; padding-left: 40%;">
+    <div>
 
-          <h2 style="float: right; height: 100%; margin: auto; margin-top: 20%; padding-right: 40%;">Welcome <span class="member-name"></span></h2>
+      <ul id="logout">
+        <li><a class="logout" href="/logout">Log Out</a></li>
+      </ul>
 
-          <div class="dropdown-content">
-            <ul>
-              <li><a href="#section1">Lessons</a></li>
-              <li><a href="/logout">Log Out</a></li>
-            </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <div id="welcome" class="column">
+        <h2 class="center">Hello <span class="member-name"></span></h2>
+        <h3 class="center" class="welcomer">Welcome to Maestro</h3>
+
+        <h3>Practice Timer</h3>
+        <div id="timerContainer">
+          <div class="timer" onclick="startTimer()">Start Timer!</div>
+          <div class="startTimer reset" onclick="startTimer()">
+            <i class="fas fa-play"></i>
           </div>
+          <div class="pauseTimer reset" onclick="pauseTimer()">
+            <i class="fas fa-pause"></i>
+          </div>
+          <div class="resetTimer reset" onclick="resetTimer()">Reset</div>
+        </div>
       </div>
     </div>
-
-<section  id="section1" >
-
-    <h1>Current Assignments:</h1>
     <div class="row">
-    <div class="column" id="postcolumn">  
-        
-</div>
-</div>
-  </section>
+      <div id="assignment-posts" class="column">
+        <h3 class="center posts" >Current Assignments:</h3>
 
-  <section  id="section2" >
-    <h2>Sessions:</h2>
-    <p>
-            <label for="start">Enter Start Date:</label>
+        <div class="column posts" id="postcolumn"> </div>
+      </div>
+    </div>
+  </div>
 
-            <input type="date" id="start" name="trip-start"
-                   value="2019-10-22"
-                   min="2019-10-22" max="2025-10-22">            
-    </p>
-  </section>
 
-  <section id="section3" >
-    <h2>And Another Section…</h2>
-  </section>
 
-  <section  id="section4" >
-    <h2>Wohoo! One more…</h2>
-  </section>  
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
+
+  <script src="./js/members.js"></script>
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+
 
 </body>
 
