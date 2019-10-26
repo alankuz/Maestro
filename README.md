@@ -5,6 +5,7 @@
 
 Deployed Application: https://shrouded-shelf-53789.herokuapp.com/ 
 
+
 Welcome to the Maestro Git Hub Repo! Maestro is a full-stack web browser application built to help music students have more accountability when it comes to practicing. The app intends to make communication between music teachers and students more efficient, effective, and accessible.
 
 ### How It Works
@@ -30,4 +31,6 @@ Maestro allows users to create two separate types of accounts, one for **teacher
     10. moment.js
 
 
-~created with love by rob canfield, alan kuzmanovic, jaron landeed, and emiliy johnson-eaton under instruction of Matt Banz, at Trilogy Education, Salt Lake City, UT
+
+~created with love by rob canfield, alan kuzmanovic, and jaron landeed under instruction of Matt Banz, at Trilogy Education, Salt Lake City, UT
+

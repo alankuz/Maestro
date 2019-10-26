@@ -28,7 +28,6 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
  
-  console.log(TeacherPost);
   return TeacherPost;
 };
 
